@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useRouter } from  "next/navigation";
 import OrderConfirmationModal from '../components/OrderConfirmed';
 
-const page = () => {
+const Page = () => {
     const [payment, setPayment] = useState("cash");
     const { cart } = useCart();
      const [showModal, setShowModal] = useState(false);
@@ -280,4 +280,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

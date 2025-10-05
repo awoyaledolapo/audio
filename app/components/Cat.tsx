@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 import { HiArrowNarrowRight } from "react-icons/hi";
@@ -29,7 +30,7 @@ export default function Cat() {
                     >
 
                         <div className="absolute -top-12 flex flex-col items-center">
-                            <img
+                            <Image
                                 src={cat.image}
                                 alt={cat.name}
                                 className="w-40 object-contain relative z-10"
