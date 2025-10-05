@@ -8,6 +8,7 @@ import SharedHeader from "../components/SharedHeader"
 import { useProducts } from "../context/ProductContext"
 import Cat from "../components/Cat"
 import Audio from "../components/Audio"
+import Image from "next/image"
 
 
 const Page = () => {
@@ -36,7 +37,7 @@ const Page = () => {
             >
               {/* Product Image */}
               <div className="w-full md:w-1/2 flex justify-center">
-                <img
+                <Image
                   src={product.image || "/placeholder.png"}
                   alt={product.name}
                   className="rounded-lg shadow-lg max-w-[31rem] object-cover"
