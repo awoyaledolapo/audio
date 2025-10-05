@@ -5,8 +5,9 @@ import { useProducts } from "../context/ProductContext"
 import SharedHeader from "../components/SharedHeader"
 import Cat from "../components/Cat"
 import Audio from "../components/Audio"
+import Image from "next/image"
 
-const page = () => {
+const Page = () => {
   const {products,loading}= useProducts()
 
   const earphones= products.filter(p=> p.category==="earphones")
@@ -33,7 +34,7 @@ const page = () => {
             >
               {/* Product Image */}
               <div className="w-full md:w-1/2 flex justify-center">
-                <img
+                <Image
                   src={product.image || "/placeholder.png"}
                   alt={product.name}
                   className="rounded-lg shadow-lg max-w-[31rem] object-cover"
@@ -65,4 +66,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

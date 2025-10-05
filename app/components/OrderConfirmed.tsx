@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "../context/CardContext";
+import Image from "next/image";
 
 type Props = {
   isOpen: boolean;
@@ -67,7 +68,7 @@ export default function OrderConfirmationModal({ isOpen, onClose }: Props) {
             <div className="flex-1 p-4">
               {cart[0] && (
                 <div className="flex items-center gap-4 mb-2">
-                  <img
+                  <Image
                     src={cart[0].images}
                     alt={cart[0].name}
                     className="w-16 h-16 object-cover rounded"
