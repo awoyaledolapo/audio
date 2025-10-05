@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import { ProductDetailsType} from "../types/ProductDetails";
 
@@ -165,7 +165,7 @@ Despite its small size, it delivers surprisingly powerful sound with enhanced ba
     inBox: ["Mini speaker", "Charging cable", "User manual"],
   },
 ];
-export async function GET(req: Request, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   const product = productDetails.find((p) => p.id === params.id); 
 
   if (!product) {
