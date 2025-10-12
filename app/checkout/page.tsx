@@ -218,6 +218,8 @@ const Page = () => {
                 <Image
                   src={item.images}
                   alt={item.name}
+                  width={600}
+                  height={100}
                   fill
                   className="object-cover"
                 />

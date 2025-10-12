@@ -1,38 +1,4 @@
-// "use client";
-// import { useCart } from "../context/CardContext";
 
-// type CartItem = {
-//   id: string
-//   name: string
-//   price: number
-//   quantity: number
-// }
-
-// type CartProps = {
-//   items: CartItem[]
-// }
-
-// export default function CartPage({ items }: CartProps) {
-//   const { cart } = useCart(); // cart is already an array of items
-
-//   return (
-//     <div className="absolute right-6 top-20 w-72 bg-white text-black shadow-lg rounded-lg p-6">
-//       <h2 className="text-lg font-bold mb-4">Your Cart</h2>
-//       {items.length === 0 ? (
-//         <p className="text-gray-500">No items selected</p>
-//       ) : (
-//         <ul className="space-y-2">
-//           {items.map((item,index) => (
-//             <li key={index} className="flex justify-between">
-//               <span>{item.name}</span>
-//               <span>x{item.quantity}</span>
-//             </li>
-//           ))}
-//         </ul>
-//       )}
-//     </div>
-//   );
-// }
 "use client";
 import Image from "next/image";
 import {  useCart } from "../context/CardContext";
@@ -40,14 +6,18 @@ import Link from "next/link";
 
 
 
-export default function CartPage() {
+export default function CartPage({ position = "top" }: { position?: "top" | "bottom" }) {
+  const positionClass =
+    position === "bottom"
+      ? "absolute bottom-20 right-6"
+      : "absolute right-6 top-20";
   const { cart, clearCart, increaseQty, decreaseQty } = useCart();
 
   // calculate total
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <div className="z-50 absolute right-6 top-20 w-[377px] bg-white text-black shadow-lg rounded-lg p-6">
+    <div className={`${positionClass} z-[9999] w-[300px] md:w-[377px] bg-white text-black shadow-lg rounded-lg p-6`}>
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-lg font-bold">Cart ({cart.length})</h2>

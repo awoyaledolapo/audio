@@ -7,7 +7,7 @@ import ProductDetails from '@/app/components/ProductDetails';
 import Audio from '@/app/components/Audio';
 
 export async function generateStaticParams() {
-  const res = await fetch("http://localhost:3000/api/Products"); 
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Products`);
   const products = await res.json();
 
   return products.map((p: { id: string }) => ({
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: { id: string } }) {
  
-  const res = await fetch(`http://localhost:3000/api/Products/${params.id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Products/${params.id}`, {
     next: { revalidate: 60 },
   });
 
@@ -27,12 +27,12 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   return (
     <>
-      <div className=' mx-auto max-w-[1110px] px-3'>
+      <div className=' mx-auto max-w-[1110px] lg:max-w-[1110px] md:max-w-[700px] px-3 lg:px-10 xl:px-6'>
         
         
   <ProductDetails data={data}/>
 
-        <div className="lg:flex lg:flex-row lg:items-start lg:py-40 lg:gap-x-[7.813rem]">
+        <div className="lg:flex lg:flex-row lg:items-start lg:py-40 lg:gap-x-[7.813rem] md:px-0 px-3 lg:px-0">
           <div className="py-[5.5rem] md:py-[7.5rem] lg:p-0 lg:max-w-[635px]">
             <h2 className="uppercase text-[1.5rem] md:text-[2rem] font-bold leading-[2.25rem] tracking-[0.0535625em] pb-6 md:pb-8">Features</h2>
             <p className="text-black text-opacity-50 leading-[1.563rem] text-[0.938rem]">
@@ -58,7 +58,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
 
 
-        <div className="flex flex-col gap-y-6 md:flex-row md:gap-x-6">
+        <div className="flex flex-col gap-y-6 md:flex-row md:gap-x-6 md:max-h-[300px] lg:max-h-[600px] ">
           <div className="flex flex-col gap-y-6 md:basis-[30%]">
 
 
@@ -70,14 +70,14 @@ export default async function Page({ params }: { params: { id: string } }) {
               <Image src="/productdeet/proddeet3.avif" alt="prod" width={1000} height={60} className='object-cover w-full h-full rounded-2xl ' />
             </div>
           </div>
-          <div className="relative h-[400px] lg:h-[645px] md:basis-[60%] lg:basis-auto lg:flex-1">
+          <div className="relative h-[400px] lg:h-[595px] md:basis-[60%] lg:basis-auto lg:flex-1">
             <Image src="/productdeet/proddeet1.avif" alt="prod" width={600} height={60} className='object-cover w-full h-full rounded-2xl ' />
           </div>
         </div>
 
 
 
-        <div className="pb-[7.5rem] py-24 md:pb-[10.75rem]">
+        <div className="pb-[7.5rem] py-24 md:pb-[10.75rem]  mt-0 md:mt-10">
 
 
           <h2 className="uppercase text-[1.5rem] md:text-[2rem] text-center font-bold leading-[2.25rem] tracking-[0.0535625em] pb-10 lg:text-[2rem]">You may also like</h2>
@@ -143,7 +143,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
 
 
-<Audio imageSrc="/homepage/head.jpg"/>
+<Audio imageSrc="/homepage/bd-m.jpg" imageSrc2="/homepage/bt-md.jpg"/>
 
       </div>
     </>

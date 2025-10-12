@@ -33,6 +33,8 @@ export default function Cat() {
                             <Image
                                 src={cat.image}
                                 alt={cat.name}
+                                width={600}
+                                height={0}
                                 className="w-40 object-contain relative z-10"
                             />
 

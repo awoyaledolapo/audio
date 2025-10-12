@@ -3,7 +3,7 @@ import { ProductType } from "./types/product";
  
 
 
-const products:ProductType = [
+const products:ProductType [] = [
   { id: "1", name: "XX99 MARK II HEADPHONES",image:"/product/pro1.avif", category: "headphones",info:"The new XX99 Mark II headphones is the pinnacle of pristine audio.it redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound"},
   { id: "2", name: "Studio Headphones",image:"/product/pro2.jpg",  category: "headphones" ,info:"The new XX99 Mark II headphones is the pinnacle of pristine audio.it redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound"},
   { id: "3", name: "Gaming Headphones",image:"/product/pro3.jpg",  category: "headphones",info:"The new XX99 Mark II headphones is the pinnacle of pristine audio.it redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound"},

@@ -14,9 +14,9 @@ const Nav = () => {
 
   return (
     <nav className="bg-black text-white ">
-      <div className="max-w-[70rem] mx-auto flex items-center justify-between px-6 py-6 ">
+      <div className="max-w-[70rem] mx-auto flex items-center justify-between px-6 lg:px-10 xl:px-6 py-6 ">
        
-        <div className="font-bold text-xl">audiophile</div>
+        <div className="font-bold text-2xl ">audiospace</div>
 
        
         <ul className="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
@@ -37,7 +37,7 @@ const Nav = () => {
         {/* Cart icon with badge */}
         <button
           onClick={() => setCartOpen(!cartOpen)}
-          className="relative"
+          className="relative hidden md:block lg:block"
         >
           <HiOutlineShoppingCart size={28} />
 
@@ -48,7 +48,7 @@ const Nav = () => {
           )}
         </button>
 
-        {cartOpen && <CartPage />}
+       {cartOpen && <CartPage position="top" />}
       </div>
     </nav>
   )

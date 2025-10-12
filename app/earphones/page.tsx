@@ -28,7 +28,7 @@ const Page = () => {
           {earphones.map((product, index) => (
             <div
               key={product.id}
-              className={`flex flex-col md:flex-row items-center justify-center gap-[3rem] md:px-20 mt-10 ${
+              className={`flex flex-col md:flex-row items-center justify-center gap-[3rem] md:px-10 mt-10 ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
             >
@@ -37,13 +37,15 @@ const Page = () => {
                 <Image
                   src={product.image || "/placeholder.png"}
                   alt={product.name}
-                  className="rounded-lg shadow-lg max-w-[31rem] object-cover"
+                  className="rounded-lg shadow-lg max-w-[18rem] lg:max-w-[31rem] md:max-w-[31rem] xl:max-w-[31rem] object-cover"
+                   width={600}
+                                height={0}
                 />
               </div>
 
               {/* Product Details */}
               <div className="w-full md:w-1/2 text-center md:text-left">
-                <h2 className="text-3xl max-w-[30rem] md:text-4xl font-bold mb-4">
+                <h2 className="text-3xl max-w-[26rem] md:max-w-[30rem] lg:max-w-[30rem] md:text-4xl font-bold mb-4">
                   {product.name}
                 </h2>
                 <p className="text-gray-600 mb-6">{product.info}</p>
@@ -61,7 +63,7 @@ const Page = () => {
  <div className="mt-[10rem]">
    <Cat/>
    </div> 
-   <Audio imageSrc="/homepage/head.jpg"/>
+   <Audio imageSrc="/homepage/bd-m.jpg" imageSrc2="/homepage/bt-md.jpg"/>
     </div>
   )
 }

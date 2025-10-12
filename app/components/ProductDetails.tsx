@@ -22,25 +22,25 @@ const ProductDetails = ({data}:{data:ProductDetailsType}) => {
     setModalOpen(true)
     }
   return (
-    <div>
+    <div className=" max-w-[68rem] mx-auto md:px-0 px-3 lg:px-0  ">
     <button
        onClick={()=>router.back()}
           className="text-gray-500 hover:text-black mb-6 mt-10 "
         >
           Go Back
         </button>
-        <div className='flex '>
-          <div className="relative h-[327px] md:h-[490px] md:w-[281px] lg:h-[560px] lg:w-[540px]">
+        <div className='flex  flex-col lg:flex-row xl:flex-row md:flex-row  '>
+          <div className="relative h-[327px] md:h-[390px] md:w-[281px] lg:h-[560px] lg:w-[540px]">
             <Image
               src={data.images}
               alt={data.name}
               width={600}
-              height={400}
-              className="w-full object-cover"
+              height={10}
+              className="w-full h-full object-cover "
             />
 
           </div>
-          <div className="md:py-[2.813rem] md:pl-[4.375rem] lg:pl-[7.813rem]">
+          <div className="md:py-[2.813rem] md:pl-[4.375rem] lg:pl-[7.813rem] mt-10 lg:mt-0 md:mt-0">
 
             <h1 className="text-3xl md:text-4xl font-bold uppercase mb-10 max-w-[10rem]">
               {data.name}

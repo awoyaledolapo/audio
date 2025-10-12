@@ -5,17 +5,17 @@ import { ProductType } from '../api/Products/types/product'
  
 type  ProductContextType={
 
-    products:ProductType,
+    products:ProductType[],
     loading:boolean
 }
 
 const  ProductsContext= createContext<ProductContextType>({
-      products:[],
+      products: [] as ProductType[],
       loading:true
 })
 export const ProductProvider = ({ children }: { children: React.ReactNode }) => {
 
-     const [products, setProducts] = useState<ProductType>([]) 
+     const [products, setProducts] = useState<ProductType[]>([]);
   const [loading, setLoading] = useState(true) 
   useEffect(() => {
     async function fetchProduct() {

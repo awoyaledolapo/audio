@@ -23,7 +23,7 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-      <div className="bg-white rounded-xl shadow-lg w-[400px] p-6 text-center relative">
+      <div className="bg-white rounded-xl shadow-lg w-[310px] lg:w-[400px] md:w-[400px] p-6 text-center relative">
         {/* Close button */}
         <button
           onClick={onClose}
