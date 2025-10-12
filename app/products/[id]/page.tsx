@@ -6,14 +6,7 @@ import { notFound } from 'next/navigation'
 import ProductDetails from '@/app/components/ProductDetails';
 import Audio from '@/app/components/Audio';
 
-export async function generateStaticParams() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Products`);
-  const products = await res.json();
 
-  return products.map((p: { id: string }) => ({
-    id: p.id.toString(),
-  }));
-}
 
 export default async function Page({ params }: { params: { id: string } }) {
  
