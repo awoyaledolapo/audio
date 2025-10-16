@@ -16,11 +16,15 @@ import Audio from '@/app/components/Audio';
 // }
 
 export default async function Page({ params }: { params: { id: string } }) {
+   const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://audio-space-peach.vercel.app/";
  
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Products/${params.id}`, {
+  const res = await fetch(`${baseUrl}/api/Products/${params.id}`, {
     next: { revalidate: 60 },
   });
-
+//  const res = await fetch (`/api/Products/${params.id}`,{
+//   next :{revalidate :60},
+//  });
   if (!res.ok) return notFound();
   const data = await res.json();
   console.log(data)
