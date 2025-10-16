@@ -165,14 +165,11 @@ Despite its small size, it delivers surprisingly powerful sound with enhanced ba
     inBox: ["Mini speaker", "Charging cable", "User manual"],
   },
 ];
-
-
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
+export async function GET(req: NextRequest,
+  context: { params: Promise<{ id: string }> }
 ) {
-  const { id } = params; 
-  const product = productDetails.find((p) => p.id === id);
+  const { id } = await context.params;
+  const product = productDetails.find((p) => p.id === id); 
 
   if (!product) {
     return NextResponse.json({ error: "Product not found" }, { status: 404 });
@@ -180,5 +177,4 @@ export async function GET(
 
   return NextResponse.json(product);
 }
-
 
