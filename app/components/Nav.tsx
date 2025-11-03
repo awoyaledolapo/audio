@@ -13,13 +13,12 @@ const Nav = () => {
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <nav className="bg-black text-white ">
+    <nav className="bg-[#131313] text-white ">
       <div className="max-w-[70rem] mx-auto flex items-center justify-between px-6 lg:px-10 xl:px-6 py-6 ">
-       
-        <div className="font-bold text-2xl ">audiospace</div>
+        <div className="font-[700] text-2xl ">audiospace</div>
 
        
-        <ul className="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+        <ul className="hidden md:hidden  lg:flex space-x-8 text-sm uppercase tracking-widest">
           <li>
             <Link href="/" className="hover:text-red-900">Home</Link>
           </li>
@@ -49,7 +48,10 @@ const Nav = () => {
         </button>
 
        {cartOpen && <CartPage position="top" />}
+    
       </div>
+       <hr className='lg:max-w-[66rem] md:max-w-[44rem]    mx-auto mt-3'/>
+      
     </nav>
   )
 }

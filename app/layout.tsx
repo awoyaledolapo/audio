@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { ProductProvider } from "./context/ProductContext"
 import { Manrope } from "next/font/google";
-
+import { ConvexClientProvider } from "./ConvexClientProvider";
 import { CartProvider } from "./context/CardContext";
 import BottomNav from "./components/BottomNav";
 
@@ -27,6 +27,7 @@ export default function RootLayout({
       <body
        className={manrope.className}
       >
+        <ConvexClientProvider>
          <ProductProvider>
       <CartProvider>
         <Nav /> 
@@ -36,7 +37,7 @@ export default function RootLayout({
     </ProductProvider>
     
     <Footer/>
-    
+    </ConvexClientProvider>
       </body>
     </html>
   );

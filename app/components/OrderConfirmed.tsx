@@ -71,6 +71,8 @@ export default function OrderConfirmationModal({ isOpen, onClose }: Props) {
                   <Image
                     src={cart[0].images}
                     alt={cart[0].name}
+                    width={600}
+                    height={100}
                     className="w-16 h-16 object-cover rounded"
                   />
                   <div>

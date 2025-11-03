@@ -38,7 +38,7 @@ const Page = () => {
                 <Image
                   src={product.image || "/placeholder.png"}
                   alt={product.name}
-                   width={600}
+                  width={600}
                                 height={0}
                   className="rounded-lg shadow-lg max-w-[18rem] lg:max-w-[31rem] md:max-w-[31rem] xl:max-w-[31rem] object-cover"
                 />

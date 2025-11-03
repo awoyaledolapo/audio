@@ -22,11 +22,11 @@ import { HiArrowNarrowRight } from "react-icons/hi";
     ];
 export default function Cat() {
   return (
-    <div className="max-w-[70rem] mx-auto grid gap-8 md:grid-cols-3 px-6 mb-10">
+    <div className="max-w-[70rem] mx-auto grid gap-8 md:grid-cols-3 px-6 mb-10 mt-[4rem]">
                 {categories.map((cat) => (
                     <div
                         key={cat.name}
-                        className="bg-white rounded-lg flex flex-col items-center justify-end relative pt-24 pb-6 shadow-2xl"
+                        className="bg-[#F1F1F1] rounded-lg flex flex-col items-center justify-end relative pt-24 pb-6 "
                     >
 
                         <div className="absolute -top-12 flex flex-col items-center">

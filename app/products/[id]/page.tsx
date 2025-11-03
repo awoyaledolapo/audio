@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 
 import ProductDetails from '@/app/components/ProductDetails';
 import Audio from '@/app/components/Audio';
+import Link from 'next/link';
 
 // export async function generateStaticParams() {
 //   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Products`);
@@ -98,9 +99,9 @@ export default async function Page({ params }: { params: { id: string } }) {
                 </div>
               </div>
            <p className="pb-8 text-[1.75rem] md:text-2xl font-bold leading-[normal] tracking-[0.0625em] uppercase lg:text-2xl lg:pt-10">XX59</p>
-            <a href="/earphones">
+            <Link href="/earphones">
               <button className="inline-flex items-center justify-center whitespace-nowrap uppercase text-[0.813rem] font-bold tracking-[0.0625em] ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-neutral-950 dark:focus-visible:ring-neutral-300 bg-red-900 hover:bg-hit-pink text-white h-10 px-8 py-4">See Product</button>
-            </a>
+            </Link >
              </div>
 
              <div className="flex flex-col items-center justify-center text-center flex-1">
@@ -113,9 +114,9 @@ export default async function Page({ params }: { params: { id: string } }) {
                 </div>
               </div>
            <p className="pb-8 text-[1.75rem] md:text-2xl font-bold leading-[normal] tracking-[0.0625em] uppercase lg:text-2xl lg:pt-10">XX99 Mark I</p>
-            <a href="/headphones">
+            <Link href="/headphones">
               <button className="inline-flex items-center justify-center whitespace-nowrap uppercase text-[0.813rem] font-bold tracking-[0.0625em] ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-neutral-950 dark:focus-visible:ring-neutral-300 bg-red-900 hover:bg-hit-pink text-white h-10 px-8 py-4">See Product</button>
-            </a>
+            </Link >
              </div>
 
              <div className="flex flex-col items-center justify-center text-center flex-1">
@@ -128,9 +129,9 @@ export default async function Page({ params }: { params: { id: string } }) {
                 </div>
               </div>
            <p className="pb-8 text-[1.75rem] md:text-2xl font-bold leading-[normal] tracking-[0.0625em] uppercase lg:text-2xl lg:pt-10">ZX9 SPEAKERS</p>
-            <a href="/speakers">
+            <Link  href="/speakers">
               <button className="inline-flex items-center justify-center whitespace-nowrap uppercase text-[0.813rem] font-bold tracking-[0.0625em] ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-neutral-950 dark:focus-visible:ring-neutral-300 bg-red-900 hover:bg-hit-pink text-white h-10 px-8 py-4">See Product</button>
-            </a>
+            </Link >
              </div>
             
           </div>
