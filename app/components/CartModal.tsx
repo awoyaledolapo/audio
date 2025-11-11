@@ -66,11 +66,11 @@ export default function CartModal({ isOpen, onClose }: CartModalProps) {
           >
             Continue Shopping
           </button>
-         
-          <button className="bg-red-900 text-white py-3 rounded-md font-bold uppercase tracking-wide hover:bg-red-600">
-            <Link  href="/checkout"> Checkout </Link>
+         <Link className="bg-red-900 hover:bg-red-600"  href="/checkout"> 
+          <button className=" text-white py-3 rounded-md font-bold uppercase tracking-wide ">
+            Checkout
           </button>
-         
+          </Link>
         </div>
       </div>
     </div>

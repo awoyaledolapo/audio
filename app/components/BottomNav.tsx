@@ -17,7 +17,7 @@ export default function BottomNav() {
 
     const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white/30 backdrop-blur-md  shadow-md block sm:hidden z-50">
+    <nav className="fixed bottom-0 left-0 right-0 bg-white/30 backdrop-blur-md  shadow-md hidden sm:hidden z-50">
       <div className="flex justify-between items-center px-6 py-3 text-gray-600">
        <Link href="/"> <button className="text-red-900">
           <FaHouse size={24} />

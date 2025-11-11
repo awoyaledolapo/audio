@@ -50,7 +50,7 @@ const Nav = () => {
        {cartOpen && <CartPage position="top" />}
     
       </div>
-       <hr className='lg:max-w-[66rem] md:max-w-[44rem]    mx-auto mt-3'/>
+       <hr className=' lg:max-w-[66rem] md:max-w-[44rem]    mx-auto mt-3'/>
       
     </nav>
   )
