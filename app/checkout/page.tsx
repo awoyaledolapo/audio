@@ -32,11 +32,9 @@ const Page = () => {
     const placeOrder = useMutation(api.placeOrder.placeOrder);
     
     const [payment, setPayment] = useState("cash");
-    const { cart } = useCart();
+    const { cart , clearCart} = useCart();
     const [showModal, setShowModal] = useState(false);
-  const [email,setEmail]=useState("")
-  const [name,setName]=useState("")
-
+  
 
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const shipping = 50; // flat shipping (you can make dynamic later)
@@ -63,6 +61,7 @@ const Page = () => {
 
 
     const onSubmit = async (data: MyFormType) => {
+       
         const orderData = {
             ...data,
             payment,
@@ -96,6 +95,8 @@ const Page = () => {
   } catch (err) {
     console.error("Order submission or email failed:", err);
   }
+
+   clearCart()
 };
  
    
@@ -120,7 +121,7 @@ const Page = () => {
                                         <label className="text-[0.75rem] font-bold leading-[normal] peer-disabled:cursor-not-allowed peer-disabled:opacity-70" >Name</label>
 
                                     </div>
-                                    <input required className="flex h-[56px] w-full rounded-lg border border-input-border bg-white px-6 py-[1.125rem] text-sm focus-visible:outline-none focus-visible:border-raw-sienna focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Name" id=":r0:-form-item" aria-describedby=":r0:-form-item-description" aria-invalid="false" {...form.register("name")} onChange={(e) => setName(e.target.value)} />
+                                    <input required className="flex h-[56px] w-full rounded-lg border border-input-border bg-white px-6 py-[1.125rem] text-sm focus-visible:outline-none focus-visible:border-raw-sienna focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Name" id=":r0:-form-item" aria-describedby=":r0:-form-item-description" aria-invalid="false" {...form.register("name")}  />
                                     {form.formState.errors.name && (
                                         <p className="text-red-500 text-sm">{form.formState.errors.name.message}</p>
                                     )}
@@ -132,7 +133,7 @@ const Page = () => {
                                     <div className="w-full flex items-center justify-between">
                                         <label className="text-[0.75rem] font-bold leading-[normal] peer-disabled:cursor-not-allowed peer-disabled:opacity-70" >Email Address</label>
                                     </div>
-                                    <input required className="flex h-[56px] w-full rounded-lg border border-input-border bg-white px-6 py-[1.125rem] text-sm focus-visible:outline-none focus-visible:border-raw-sienna focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Email Address" id=":r1:-form-item" aria-describedby=":r1:-form-item-description" aria-invalid="false"  {...form.register("email")} onChange={(e) => setEmail(e.target.value)} />
+                                    <input required className="flex h-[56px] w-full rounded-lg border border-input-border bg-white px-6 py-[1.125rem] text-sm focus-visible:outline-none focus-visible:border-raw-sienna focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Email Address" id=":r1:-form-item" aria-describedby=":r1:-form-item-description" aria-invalid="false"  {...form.register("email")}  />
                                     {form.formState.errors.email && (
                                         <p className="text-red-500 text-sm">{form.formState.errors.email.message}</p>
                                     )}

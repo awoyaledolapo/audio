@@ -15,9 +15,9 @@ export default function Categories() {
 
             <Cat />
             <div className="px-6">
-            <div className="relative overflow-hidden bg-[#D87D4A] lg:max-w-[60rem] xl:max-w-[67rem] md:max-w-[59rem] sm:max-w-[48rem] px-10  lg:gap-[10rem] md:gap-[5rem] mx-auto rounded-lg md:px-[10rem]   py-10 lg:flex-row md:flex-col flex items-center justify-center mt-[8rem]">
+            <div className="relative overflow-hidden bg-[#D87D4A] lg:max-w-[60rem] xl:max-w-[67rem] md:max-w-[59rem] sm:max-w-[48rem] px-10  lg:gap-[10rem] md:gap-[5rem] mx-auto rounded-lg md:px-[10rem]   py-10 lg:flex-row md:flex-col flex-col flex items-center justify-center mt-[8rem]">
               {/* <div className="absolute w-[400px] h-[400px] border border-white/40 rounded-full -z-10"></div> */}
-              <div className="lg:max-w-[410.23358154296875px] md:max-w-[210.23358154296875px] relative lg:top-[5rem] md:top-[3rem]">
+              <div className="lg:max-w-[410.23358154296875px] md:max-w-[210.23358154296875px] max-w-[172.2481689453125px] relative lg:top-[5rem] md:top-[3rem] top-[0rem]">
                 <Image width={400} height={100}  src="/homepage/svg-speak.png" alt="speaker-img"/>
               </div>
               
@@ -47,7 +47,7 @@ export default function Categories() {
   style={{
     backgroundImage: "url('/homepage/side.png')",
   }}
-  className=" items-start lg:max-w-[60rem] xl:max-w-[68rem] md:max-w-[59rem] sm:max-w-[48rem] mx-auto rounded-lg px-10 py-20 flex  bg-cover bg-no-repeat bg-[position:100%_90%] mt-[4rem]"
+  className=" items-start lg:max-w-[60rem] xl:max-w-[68rem] md:max-w-[59rem] sm:max-w-[48rem] mx-auto rounded-lg px-10 py-20 flex  bg-cover bg-no-repeat bg-[position:0%_90%]  md:bg-[position:100%_90%] mt-[4rem]"
 >
  
   <div className=" ">

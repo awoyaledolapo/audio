@@ -23,11 +23,11 @@ const Ear  = ({image,title,buttonText}:ProductCardProps) => {
 </div>
 <div className="bg-[#F1F1F1] rounded-lg  lg:w-[410px] xl:w-[520px] px-[4.5rem] py-10">
 <p className="uppercase text-black text-[1.75rem] font-bold tracking-[0.125em] pb-8  relative">YX1 <br/> Earphones</p>
-<a href="/earphones/yx1-earphones">
+<Link href="/earphones/yx1-earphones">
 <button className="inline-block border border-black px-6 py-2 text-sm font-medium uppercase tracking-wide transition hover:bg-[black] hover:text-white">
           {buttonText}
         </button>
-        </a>
+        </Link >
 </div>
 
 </div>

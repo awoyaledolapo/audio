@@ -13,14 +13,21 @@ const ProductDetails = ({data}:{data:ProductDetailsType}) => {
      const [isModalOpen, setModalOpen] = useState(false);
      const router=useRouter()
 
-  const increaseQty = () =>{setQuantity((prev) => prev + 1) , setCount((prev) => prev + 1);}
-  const decreaseQty = () =>{
-    setQuantity((prev) => (prev > 1 ? prev - 1 : 1)),setCount((prev) => prev - 1);}
+  const increaseQty = () => {
+  setQuantity((prev) => prev + 1);
+  setCount((prev) => prev + 1);
+}
 
-    const handleCart=()=>{
-    addToCart({...data, quantity}),
-    setModalOpen(true)
-    }
+const decreaseQty = () => {
+  setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+  setCount((prev) => (prev > 1 ? prev - 1 : 1));
+}
+
+const handleCart = () => {
+  addToCart({ ...data, quantity });
+  setModalOpen(true);
+}
+
   return (
     <div className=" max-w-[68rem] mx-auto md:px-0 px-3 lg:px-0  ">
     <button
