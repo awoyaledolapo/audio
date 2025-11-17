@@ -1,7 +1,7 @@
 "use client"
 
 import {useContext,createContext,useEffect,useState} from 'react'
-import { ProductType } from '../api/Products/types/product'
+import { ProductType } from '../api/products/types/product'
  
 type  ProductContextType={
 
@@ -20,7 +20,7 @@ export const ProductProvider = ({ children }: { children: React.ReactNode }) => 
   useEffect(() => {
     async function fetchProduct() {
       try {
-        const res = await fetch("/api/Products")
+        const res = await fetch("/api/products")
         const data = await res.json()
         setProducts(data)
       } catch (err) {

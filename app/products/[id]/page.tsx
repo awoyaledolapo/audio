@@ -18,9 +18,9 @@ import Link from 'next/link';
 
 export default async function Page({ params }: { params: { id: string } }) {
    const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://audio-space-peach.vercel.app/";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://audio-tau-beige.vercel.app/";
  
-  const res = await fetch(`${baseUrl}/api/Products/${params.id}`, {
+  const res = await fetch(`${baseUrl}/api/products/${params.id}`, {
     next: { revalidate: 60 },
   });
 //  const res = await fetch (`/api/Products/${params.id}`,{

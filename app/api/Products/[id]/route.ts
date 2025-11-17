@@ -166,7 +166,7 @@ Despite its small size, it delivers surprisingly powerful sound with enhanced ba
   },
 ];
 export async function GET(req: NextRequest,
-  context: { params: Promise<{ id: string }> }
+  context: { params: { id: string } }
 ) {
   const { id } = await context.params;
   const product = productDetails.find((p) => p.id === id); 
