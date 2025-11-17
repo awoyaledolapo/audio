@@ -19,13 +19,13 @@ const Hero = () => {
               made for the passionate music enthusiast.
             </p>
             <Link  href="/headphones">
-            <button className="bg-[#D87D4A] font-[700] text-white px-6 py-3 uppercase tracking-wide hover:bg-[#FBAF85] transition lg:text-[13px]">
+            <button className="cursor-pointer hover:bg-red-900 bg-red-700 font-[700] text-white px-6 py-3 uppercase tracking-wide  transition lg:text-[13px]">
               See Product
             </button>
             </Link>
           </div>
           <div className=' overflow-hidden  lg:inline-block hidden '>
-            <Image src="/homepage/Bitmap.png" alt="hero-image"width={600} height={100} className="scale-100" />
+            <Image loading="lazy" src="/homepage/Bitmap.png" alt="hero-image"width={600} height={100} className="scale-100" />
           </div>
         </div>
         </div>
