@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { useCart } from '../context/CardContext';
-import { ProductDetailsType } from '../api/Products/types/ProductDetails';
+import { ProductDetailsType } from '../api/products/types/ProductDetails';
 import CartModal from './CartModal';
 import { useRouter } from "next/navigation"
 const ProductDetails = ({data}:{data:ProductDetailsType}) => {
