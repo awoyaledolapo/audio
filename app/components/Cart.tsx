@@ -6,9 +6,11 @@ import Link from "next/link";
 
 
 
-export default function CartPage({ position = "top" }: { position?: "top" | "bottom" }) {
+export default function CartPage({ position = "top" }: { position?: "top" | "bottom" | "inline" }) {
   const positionClass =
-    position === "bottom"
+    position === "inline"
+      ? ""
+      : position === "bottom"
       ? "absolute bottom-20 right-6"
       : "absolute right-6 top-20";
   const { cart, clearCart, increaseQty, decreaseQty } = useCart();
