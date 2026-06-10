@@ -25,7 +25,7 @@ const Hero = () => {
             </Link>
           </div>
           <div className=' overflow-hidden  lg:inline-block hidden '>
-            <Image loading="lazy" src="/homepage/Bitmap.png" alt="hero-image"width={600} height={100} className="scale-100" />
+            <Image src="/homepage/Bitmap.png" alt="hero-image"width={600} height={100} className="scale-100" />
           </div>
         </div>
         </div>
